@@ -13,7 +13,6 @@
     "express-php-fpm": "^3.0.0",
     "tailwindcss": "^3.3.3",
     "typed.js": "^2.0.16",
-    // ... Dan dependensi lain yang Anda gunakan secara langsung di produksi
   },
   "devDependencies": {
     "prettier": "^3.0.3",
@@ -27,7 +26,6 @@
     "postcss-value-parser": "^4.2.0",
     "sucrase": "^3.34.0",
     "chokidar": "^3.5.3",
-    // ... Dan dependensi lain yang hanya Anda gunakan selama pengembangan
   },
   "author": "",
   "license": "ISC",
