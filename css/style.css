@@ -1,0 +1,1324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --border-color: #ccc;
+  /* HSL color mode */
+  --hue-color: 224;
+  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --main-color: #4988f6;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 3rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  --header-height: 5rem;
+  --font-semi: 600;
+  --font-color: #ffff;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+*::selection {
+  background: var(--main-color);
+  color: var(--bg-color);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header.sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-img img {
+  width: 35vw;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-content h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+span {
+  color: var(--main-color);
+}
+
+.home-content h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.6rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.5s ease;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color);
+}
+
+.about-img img {
+  width: 35vw;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+.services {
+  min-height: auto;
+  padding-bottom: 10rem;
+}
+
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.services-container .services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.services-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.services-box h3 {
+  font-size: 2.6rem;
+}
+
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.portfolio {
+  background: var(--second-bg-color);
+  min-height: auto;
+  padding-bottom: 10rem;
+}
+
+.portfolio h2 {
+  margin-bottom: 4rem;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.portfolio-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+  font-size: 3rem;
+}
+
+.portfolio-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.portfolio-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+.contact {
+  min-height: auto;
+  padding-bottom: 7rem;
+}
+
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: 0.8rem;
+  margin: 0.7rem 0;
+}
+
+.contact form .input-box input {
+  width: 49%;
+}
+
+.contact form textarea {
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
+}
+
+/* BREAKPOINTS */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 879px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .education-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about img {
+    width: 70vw;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+  .education-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 40px; /* atau sesuaikan tinggi sesuai keinginan Anda */
+  width: auto;
+  margin-right: 10px; /* atau sesuaikan margin sesuai keinginan Anda */
+}
+
+/* style untuk logo */
+#logo-image {
+  width: 30px; /* Atur lebar sesuai kebutuhan */
+  height: auto; /* Mengatur tinggi otomatis berdasarkan lebar untuk menjaga aspek rasio */
+  margin-right: 10px; /* Jarak antara gambar dan teks */
+  vertical-align: middle; /* Penyesuaian posisi vertikal */
+}
+
+@media (max-width: 365px) {
+  .home-img img,
+  .about-img img {
+    width: 90vw;
+  }
+}
+
+#skills {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+#education {
+  margin-top: -200px;
+  padding-top: -200px;
+}
+
+#services {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+/* skills section styling */
+.skills__container {
+  display: flex;
+  row-gap: 2rem;
+  text-align: center;
+}
+.skills__container > div {
+  flex: 1;
+}
+.bd-grid.skills__container {
+  display: flex !important;
+  gap: 2rem !important;
+}
+.skills .section-title {
+  font-size: 5rem; /* Anda bisa mengatur ukuran yang Anda inginkan */
+}
+
+.skills__subtitle {
+  font-size: large;
+  margin-bottom: var(--mb-2);
+}
+
+.skills__text {
+  margin-bottom: var(--mb-4);
+}
+
+.skills__data {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem; /* Atau nilai lain sesuai keinginan Anda */
+  padding-bottom: 2rem; /* Atau nilai lain sesuai keinginan Anda */
+  position: relative;
+  font-weight: var(--font-semi);
+  padding: 0.5rem 1rem;
+  margin-bottom: var(--mb-4);
+  border-radius: 0.5rem;
+  /* box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15); */
+  box-shadow: 0px 4px 25px rgb(249, 253, 255);
+}
+
+.skills__icon {
+  font-size: 2rem;
+  margin-right: var(--mb-2);
+  color: var(--first-color);
+}
+
+.skills__names {
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.25px;
+}
+
+.skills__names .skills__name {
+  color: #ffffff; /* kode warna untuk putih */
+}
+
+.skills__percentage {
+  color: #ffffff; /* kode warna untuk putih */
+  letter-spacing: 1.25px;
+}
+
+.skills__bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* background-color: var(--first-color); */
+  background-color: #fff;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  z-index: var(--z-back);
+}
+
+.skills__prodman {
+  letter-spacing: 2rem;
+  width: 85%;
+}
+
+.skills__projman {
+  width: 85%;
+}
+
+.skills__edtech {
+  width: 90%;
+}
+
+.skills__bp {
+  width: 75%;
+}
+
+.skills__jira {
+  width: 90%;
+}
+.skills__proplan {
+  width: 85%;
+}
+.skills__python {
+  width: 70%;
+}
+
+.skills__figma {
+  width: 80%;
+}
+
+.skills__ux {
+  width: 85%;
+}
+
+.skills__img {
+  border-radius: 0.5rem;
+}
+
+.custom-icon {
+  font-size: 2rem;
+  margin-right: var(--mb-2);
+  color: var(--first-color);
+}
+
+.jiraconflue-icon {
+  width: 18px; /* atau ukuran yang Anda inginkan */
+  height: 18px; /* atau ukuran yang Anda inginkan */
+  margin-right: var(--mb-2);
+  background-image: url("/images/jiraconflue.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prodlogo-icon {
+  margin: 1rem 0 3rem;
+  display: flex;
+  align-items: center;
+  width: 70px; /* atau ukuran yang Anda inginkan */
+  height: 70px; /* atau ukuran yang Anda inginkan */
+  margin-right: var(--mb-2);
+  background-image: url("/images/productlogo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.projectplan-icon {
+  width: 18px; /* atau ukuran yang Anda inginkan */
+  height: 18px; /* atau ukuran yang Anda inginkan */
+  margin-right: var(--mb-2);
+  background-image: url("/images/projectplan.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.python-icon {
+  width: 18px; /* atau ukuran yang Anda inginkan */
+  height: 18px; /* atau ukuran yang Anda inginkan */
+  margin-right: var(--mb-2);
+  background-image: url("/images/python.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.figma-icon {
+  width: 18px; /* atau ukuran yang Anda inginkan */
+  height: 18px; /* atau ukuran yang Anda inginkan */
+  margin-right: var(--mb-2);
+  background-image: url("/images/figma.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.education {
+  background: var(--second-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  border-bottom-width: -100px;
+  padding-bottom: 20px;
+}
+
+.education h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.education-wrapper {
+  display: flex;
+  padding-top: 10px;
+  margin: 10px;
+  flex-direction: column; /* Mengatur elemen dalam arah kolom */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  width: 100%; /* Mengambil lebar penuh dari .education */
+}
+
+.education-container {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly; /* Menyebarkan kedua box secara merata */
+  width: 70%; /* Mengambil lebar penuh dari .education-wrapper */
+}
+
+.education-container .education-box {
+  width: 45%; /* atau nilai lain yang Anda inginkan */
+  margin-right: 5%; /* atau margin-left untuk box kedua */
+}
+
+.education-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.education-box:hover img {
+  transform: scale(1.1);
+}
+
+.education-box .education-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.education-box:hover .education-layer {
+  transform: translateY(0);
+}
+
+.education-layer h4 {
+  font-size: 3rem;
+}
+
+.education-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.education-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.education-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+.education-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  width: 45%; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.education .heading {
+  margin-top: -200px; /* Atur sesuai kebutuhan */
+  padding-top: 10px; /* Atur sesuai kebutuhan, untuk memberi ruang di atas teks */
+  padding-bottom: 20px;
+  margin-bottom: 10rem;
+}
+
+.certif {
+  min-height: auto;
+  padding-bottom: 10rem;
+}
+
+.certif h2 {
+  margin-bottom: 5rem;
+}
+
+.certif-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch; /* To ensure each box takes the full height of the row */
+  gap: 2rem; /* Your preferred gap between boxes */
+}
+
+.certif-container .certif-box {
+  flex: 1 1 30rem;
+  background: var(--second-bg-color) !important;
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.certif-container .certif-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.certif-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.certif-box h3 {
+  font-size: 2.6rem;
+}
+
+.certif-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.certif-box .btn {
+  margin-right: 1rem; /* Atau sesuai dengan preferensi Anda */
+}
+
+.certif-box .btn:hover {
+  background-color: yellow; /* Atau kode warna kuning yang Anda prefer */
+  color: #000; /* Anda bisa menggantinya dengan warna yang sesuai dengan desain Anda */
+}
+
+.certif-box .btn:last-child {
+  margin-right: 0; /* Menghapus margin pada tombol terakhir */
+}
+
+.certif-box {
+  flex: 0 0 calc(50% - 1rem); /* 1rem adalah setengah dari gap untuk mengakomodasi jarak antar box */
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+}
+
+.certif-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.download-btn:hover {
+  background-color: yellow; /* Atau kode warna kuning yang Anda prefer */
+  color: #000; /* Warna teks saat hover */
+}
+.skills__extra-content {
+  display: none;
+}
+
+.skills__names {
+  cursor: pointer;
+}
+
+.expanded {
+  display: block !important;
+}
+
+.skills__bar {
+  height: 5px;
+  background-color: #4988f6;
+  margin-top: 5px;
+}
+
+.skills__data {
+  margin-bottom: 20px;
+}
+
+/* Add this style to give some pointer indication to clickable elements */
+.skills__names {
+  cursor: pointer;
+}
+
+.additional-content {
+  display: none;
+}
+.expanded {
+  display: block !important;
+}
+
+/* EXPAND */
+.toggle-container {
+  border: 1px solid #ccc;
+  margin: 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem; /* Atau nilai lain sesuai keinginan Anda */
+  font-weight: var(--font-semi);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgb(249, 253, 255);
+}
+
+.toggle-header {
+  display: flex; /* tambahan */
+  justify-content: space-between; /* tambahan */
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.date {
+  margin-left: auto;
+  color: #fff;
+}
+
+.toggle-body {
+  display: none;
+  padding: 10px;
+  background-color: #4786f4;
+  color: #ffffff;
+}
+
+/* WORK EXPERIENCE */
+.we {
+  background: var(--second-bg-color);
+  min-height: auto;
+  padding-bottom: 10rem;
+}
+
+.we h2 {
+  margin-bottom: 4rem;
+}
+
+.we-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.we-container .portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.we-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.we-box:hover img {
+  transform: scale(1.1);
+}
+
+.we-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 4rem;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.we-box:hover .we-layer {
+  transform: translateY(0);
+}
+
+.we-layer h4 {
+  font-size: 3rem;
+}
+
+.we-layer p {
+  font-size: 1.6rem;
+  margin: 0.3rem 0 1rem;
+}
+
+.we-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+.we-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+#techlearning-content {
+  display: none;
+}
+
+/* SLIDER CODEPAN 2 */
+/*** 
+
+====================================================================
+		Testimonial Section
+====================================================================
+
+***/
+
+.large-container {
+  position: static;
+  max-width: 1580px;
+  padding: 0px 30px;
+  margin: 0 auto;
+}
+
+.testimonial-section {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100vh; /* Atur tinggi sesuai dengan tinggi viewport */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    position: absolute;
+    left: -200px;
+    top: 22%;
+    background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 701px;
+    height: 756px;
+    content: "";
+    -webkit-animation: fa-spin 25s infinite alternate;
+    -moz-animation: fa-spin 25s infinite alternate;
+    -ms-animation: fa-spin 25s infinite alternate;
+    -o-animation: fa-spin 25s infinite alternate;
+    animation: fa-spin 25s infinite alternate;
+  }
+
+  .sec-title {
+    position: relative;
+    margin-bottom: 115px;
+    .title {
+      margin-bottom: 20px;
+    }
+  }
+
+  .testimonial-carousel {
+    position: relative;
+    max-width: 1100px;
+    /* margin: 0 -50px; */
+    margin: 0;
+  }
+}
+
+.testimonial-block {
+  width: 100%;
+  position: relative;
+  padding: 50px;
+  .inner-box {
+    width: 100%;
+    padding: 80px 105px;
+    background-color: #ffffff;
+    box-shadow: 0 0 50px rgba(226, 222, 232, 0.75);
+  }
+  .text {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    line-height: 32px;
+    color: #282331;
+    font-weight: 400;
+    margin-bottom: 50px;
+    font-family: "Muli", sans-serif;
+  }
+  .info-box {
+    position: relative;
+    padding-left: 115px;
+    padding-top: 10px;
+    .thumb {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 82px;
+      width: 82px;
+      img {
+        border: 6px solid #e5e6fa;
+        border-radius: 50%;
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        box-shadow: 0 45px 45px rgba(147, 147, 147, 0.35);
+      }
+    }
+    .name {
+      position: relative;
+      display: block;
+      font-size: 21px;
+      line-height: 1.2em;
+      color: #382c4d;
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-family: "Niramit", sans-serif;
+    }
+    .designation {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+      color: #8053f7;
+      font-weight: 400;
+      font-family: "Muli", sans-serif;
+    }
+  }
+}
+
+.testimonial-carousel {
+  .owl-nav {
+    position: absolute;
+    right: 75px;
+    bottom: 70px;
+  }
+  .owl-next,
+  .owl-prev {
+    position: relative;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    line-height: 75px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .owl-next:hover,
+  .owl-prev:hover {
+    background-color: #00df97;
+    box-shadow: 0 24px 24px rgba(187, 187, 187, 0.75);
+  }
+}
+
+.arrow-right,
+.arrow-left {
+  position: relative;
+  display: inline-block;
+  height: 9px;
+  width: 43px;
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-left-2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-right {
+  background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-right-2.png);
+}
+
+.testimonial-section .thumb-layer {
+  position: absolute;
+  right: 30px;
+  top: 120px;
+  .image {
+    position: relative;
+    margin-right: 0;
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .testimonial-section .sec-title {
+    margin-bottom: 50px;
+  }
+  .testimonial-block {
+    width: 100%;
+    padding: 0;
+    .inner-box {
+      width: 100%;
+      box-shadow: none;
+      border: 2px solid #f1f1f1;
+    }
+  }
+  .testimonial-carousel {
+    .owl-nav {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .owl-next,
+    .owl-prev {
+      border: 2px solid #f1f1f1;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .large-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
