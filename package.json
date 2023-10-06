@@ -27,6 +27,10 @@
     "sucrase": "^3.34.0",
     "chokidar": "^3.5.3"
   },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "author": "",
   "license": "ISC",
   "keywords": [],
